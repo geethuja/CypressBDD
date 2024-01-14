@@ -1,0 +1,24 @@
+{
+  "name": "cucucmberbddcypress",
+  "version": "2.0.0",
+  "description": "Cucumber Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "BDD",
+    "cucumber",
+    "Cypress"
+  ],
+  "author": "Geethuja Tom",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.2",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": { 
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/e2e/ecommerce/" 
+  }
+}
