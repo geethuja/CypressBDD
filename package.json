@@ -4,9 +4,9 @@
   "description": "Cucumber Framework",
   "main": "index.js",
   "scripts": {
-    "test": "npm run ui-test-allure",
-    "ui-test-allure":"cypress run --browser chrome --env allure=true",
-    "allure:report" :"allure generate allure-results --clean -o allure-reports"
+    "test": "npx cypress run --env allure=true",
+    "allure:report": "allure generate allure-results --clean -o allure-reports && allure open allure-reports",
+    "allure:clear_results": "(if exist allure-results (rmdir /S /Q allure-results && mkdir allure-results))"
   },
   "keywords": [
     "BDD",
@@ -16,9 +16,13 @@
   "author": "Geethuja Tom",
   "license": "ISC",
   "devDependencies": {
+    "-": "^0.0.1",
     "@shelex/cypress-allure-plugin": "^2.40.1",
+    "allure-commandline": "^2.25.0",
     "cypress": "^13.6.2",
-    "cypress-cucumber-preprocessor": "^4.3.1"
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-mochawesome-reporter": "^3.8.0",
+    "g": "^2.0.1"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
