@@ -17,7 +17,13 @@
     "cypress": "^13.6.2",
     "cypress-cucumber-preprocessor": "^4.3.1"
   },
-  "cypress-cucumber-preprocessor": { 
+  "cypress-cucumber-preprocessor": {
+    “cucumberJson”: {
+        “generate”: true,
+        “outputFolder”: “cypress/cucumber-json”,
+        “filePrefix”: “”,
+        “fileSuffix”: “.cucumber”
+      },
     "nonGlobalStepDefinitions": false,
     "step_definitions": "cypress/e2e/ecommerce/" 
   }
