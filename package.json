@@ -4,8 +4,9 @@
   "description": "Cucumber Framework",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/cypress run",
-    "runtests":"npm run test --"
+    "test": "npm run ui-test-allure",
+    "ui-test-allure":"cypress run --browser chrome --env allure=true",
+    "allure:report" :"allure generate allure-results --clean -o allure-reports"
   },
   "keywords": [
     "BDD",
@@ -15,6 +16,7 @@
   "author": "Geethuja Tom",
   "license": "ISC",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.1",
     "cypress": "^13.6.2",
     "cypress-cucumber-preprocessor": "^4.3.1"
   },
